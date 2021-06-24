@@ -1,38 +1,140 @@
 .App {
   text-align: center;
+  font-family: "Cambria Math", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  background: linear-gradient(55deg, #ffa1a1 0%, #fcd7d7 51%, #ffffff 85%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header {
+  padding: 60px;
+  text-align: center;
+  background: lightcoral;
+  font-size: 50px;
+  font-weight: bolder;
   color: white;
+  border-style: double;
+  border-radius: 20px;
+  border-width: 10px;
+  border-color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+  display: flex;
+  background-color: #333;
+  border-style: double;
+  border-width: 10px;
+  border-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-style: double;
+  border-width: 10px;
+  border-color: white;
+}
+
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  background: lightcoral;
+  color: white;
+  border-style: double;
+  border-radius: 20px;
+  border-width: 10px;
+  border-color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .row, .navbar {
+    flex-direction: column;
   }
 }
+
+.card {
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 20px;
+  align-items: center;
+  max-width: 600px;
+  box-shadow: 0 10px 20px 0 grey;
+  margin: 2rem auto;
+  padding: 0.75rem;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.search {
+  font-size: 20px;
+}
+
+.input {
+  padding-top: 1.5rem;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+  border-radius: 4px;
+  background-color: lightpink;
+}
+
+.button {
+  background-color: lightcoral;
+  border-style: double;
+  border-radius: 20px;
+  border-width: 5px;
+  border-color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+  border-color: lightcoral;
+}
+
+.form {
+  font-size: 18px;
+}
+
+
