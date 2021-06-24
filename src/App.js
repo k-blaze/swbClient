@@ -1,7 +1,7 @@
 import './App.css';
 import './Style.css';
-import React, {Component, useEffect, useState} from "react";
-import {BrowserRouter as Router, Link, Redirect, Route, Switch} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 import MainPage from "./pages/MainPage";
 import AddStory from "./pages/AddStory";
@@ -23,7 +23,7 @@ function App() {
 
     useEffect(() => {
         Axios.get("https://swb-website-api.herokuapp.com/api/login").then((response) => {
-            if(response.data.loggedIn == true) {
+            if(response.data.loggedIn === true) {
                 setLoginStatus(response.data.user[0].username);
             }
         })
