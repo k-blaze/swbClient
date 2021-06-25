@@ -10,6 +10,7 @@ import UserPage from "./pages/UserPage";
 import Registration from "./pages/Registration";
 import Axios from "axios";
 import FindBook from "./pages/FindBook";
+import ContactForm from "./pages/ContactForm";
 
 
 function App() {
@@ -120,6 +121,7 @@ function App() {
 
                     <div className="footer">
                         This is my footer!
+                        <ContactForm />
                         <br/>
 
                     </div>
