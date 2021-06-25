@@ -62,7 +62,6 @@ function App() {
                             <Link to = "/addstory">Add Book</Link>
                             <Link to = "/search">Search for story</Link>
                             <Link to = "/profile">Your profile</Link>
-                            <Link to = "/register">Register</Link>
                         </ul>
                         <div className="box-1">
                             <div className="btn btn-one">
@@ -87,8 +86,9 @@ function App() {
                         <div className="main">
                             <div className="card">
                                 <Route path = "/" exact>
-
                                     <h1>Login</h1>
+                                    <h2>You need to login if you want to view the content of the site</h2>
+                                    <p>If you don't have an account please use the register form</p>
                                     <div className="form">
                                         <label>Username:</label>
                                         <br/>
@@ -104,12 +104,12 @@ function App() {
                                         <br/>
                                         <br/>
                                         <button onClick={LoginUser}>Submit</button>
-
                                     </div>
                                     <h1>{loginStatus}</h1>
-
+                                    <hr className="rounded"/>
+                                    <hr className="rounded"/>
+                                    <Registration/>
                                 </Route>
-                                <Route path = "/register" component={Registration}/>
                                 <ProtectedRoute path = "/home" component={MainPage} isAuth={isAuth}/>
                                 <ProtectedRoute path = "/leaderboard" component={Leaderboard} isAuth={isAuth}/>
                                 <ProtectedRoute path = "/addstory" component={AddStory} isAuth={isAuth}/>
@@ -118,12 +118,11 @@ function App() {
                             </div>
                         </div>
                     </div>
-
                     <div className="footer">
-                        This is my footer!
+                        <h1>Thank you for visiting my site!</h1>
+                        <h2>Here you can message me if you have any questions or suggestions:</h2>
                         <ContactForm />
                         <br/>
-
                     </div>
                 </Router>
             </div>

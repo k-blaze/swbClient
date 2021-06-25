@@ -37,7 +37,7 @@ function Registration() {
                 <input type="password" onChange={(e) => {
                     setPasswordReg(e.target.value);
                 }}/>
-                <br/>
+                <br/><br/>
                 <button onClick={Register}>Submit</button>
                 <br/>
                 <p>{confirmation}</p>
