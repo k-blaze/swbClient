@@ -8,10 +8,6 @@ function FindBook() {
     const [allData,setAllData] = useState([]);
     const [filteredData,setFilteredData] = useState(allData);
 
-    const refreshPage = ()=>{
-        window.location.reload();
-    }
-
     useEffect(() => {
         Axios.get("https://swb-website-api.herokuapp.com/api/getall")
             .then(response => {
@@ -25,7 +21,7 @@ function FindBook() {
     }, []);
 
     const handleSearch = (event) =>{
-        let value = event.target.value.toLowerCase();
+        let value = event.target.value;
         let result = [];
         console.log(value);
         result = allData.filter((data) => {
